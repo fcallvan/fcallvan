@@ -209,7 +209,18 @@ jQuery(document).ready(function( $ ) {
 
   // 준비 안내 경고창
   $('.ready').on('click', function(){
+    $(this).blur();
     swal('죄송합니다', '지금은 사용 할 수 없습니다.<br>서비스 준비중입니다.', 'error');
   });
+
+  var uagent = navigator.userAgent.toLocaleLowerCase();
+  if (uagent.search("android") > -1) {
+    $('#kakao').attr('href','kakaotalk://launch');
+
+  } else if (uagent.search("iphone") > -1 || uagent.search("ipod") > -1 || uagent.search("ipad") > -1) {
+    $('#kakao').attr('href','kakaotalk://');
+  } else {
+    $('#kakao').attr('href','javscript:;');
+  }
 
 });
