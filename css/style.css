@@ -621,13 +621,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .box .icon i {
-  color: #444;
+  color: #50d8af;;
   font-size: 64px;
   transition: 0.5s;
   line-height: 0;
   margin-top: 34px;
 }
-
+/*
+크로스브라우징 이슈 2018.07.23
 #services .box .icon i:before {
   background: #0c2e8a;
   background: linear-gradient(45deg, #50d8af 0%, #a3ebd5 100%);
@@ -635,7 +636,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+*/
 #services .box h4 {
   margin-left: 100px;
   font-weight: 700;
